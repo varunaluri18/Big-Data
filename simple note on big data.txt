@@ -1,0 +1,64 @@
+31-08-2021
+
+Hadoop
+Core Services/Daemons 
+. Name Node
+. Secondary Name Node
+. Data Node
+. Job Tracker
+. Task Tracker
+
+Data storage and processing
+Data Analysis
+Data Warehouse
+NOSQL DB - MongoDB, Cassandra
+Realtime Processing - spark
+Messaging System - kafka
+
+Hadoop Core Componenets
+. HDFS - Hadoop Distributed File System
+. Map Reduce - Data Processing
+. YARN - Yet Another Resource Negotiaton (Resource Management)
+
+Map Reduce
+Key Value pair
+If different mapper outputs(k,v) coming from a single node contains duplicate
+They will get combined locally reduced as a single(k,v)
+MR performs distributed and parallel computation using large datasets across large no of nodes
+
+Two Daemons of Map Reduce
+Job Tracker
+Task Tracker
+
+Hadoop 2 .0 onwards(YARN)
+Resource Manager
+Node Manager
+.Job client submits the job to the resource manager
+.YRAN RM scheduler is responsible for the co-ordination of resource allocation of the cluster
+.YARN NM runs on each node and does node level resource management ,co-ordinating with the RM .It will launch and monitor comput containers on the machine
+
+
+sqoop - Load structured data
+Flume - Load unstructured data
+WORM - Write once read many 
+
+Pig - Load any type of data
+Hive - Act like as Data Ware House
+HBase - NoSQL database
+Impala - It is from Cloudera(25% faster than map reduce)
+_____________________________________________________________
+oracle.com/in/java/technologies/javase-jdk16-downloads.html
+https://www.oracle.com/in/java/technologies/javase/javase-jdk8-downloads.html
+https://github.com/kontext-tech/winutils/tree/master/hadoop-3.3.0/bin
+
+hadoop.apache.org/release/3.3.0.html
+
+hadoop namenode -format
+start-all.cmd
+
+localhost:8088
+localhost:9870
+
+hdfs dfs -mkdir \input
+hdfs dfs -copyFromLocal C:/Sample/data.txt /input
+hadoop jar share/hadoop/mapreduce/Hadoop-mapreduce-examples-3.3.0.jar wordcount /input /output
